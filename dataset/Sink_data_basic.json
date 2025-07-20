@@ -1,0 +1,19 @@
+{
+	"name": "Sink_data_basic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedserviceDatalake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "direct_from_source",
+				"fileSystem": "weather-data-migration"
+			}
+		},
+		"schema": {}
+	}
+}
