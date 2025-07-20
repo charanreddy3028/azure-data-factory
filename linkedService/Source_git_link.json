@@ -1,0 +1,14 @@
+{
+	"name": "Source_git_link",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "getting data from the link",
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

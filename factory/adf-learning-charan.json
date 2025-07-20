@@ -1,0 +1,9 @@
+{
+	"name": "adf-learning-charan",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "bcbf7c44-3670-476d-bca6-a6778ecfd8f1",
+		"tenantId": "c9ce3ad0-0290-42dd-ace9-33bea79d8c63"
+	}
+}

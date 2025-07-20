@@ -1,0 +1,49 @@
+{
+	"name": "ParentPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "ExecutePipelinemanager",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pipelinemanager",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute_Copy_data",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "ExecutePipelinemanager",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ifcondition",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-07-19T05:34:58Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

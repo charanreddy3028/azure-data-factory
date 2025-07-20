@@ -1,0 +1,18 @@
+{
+	"name": "manager_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source-container/blobs/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/70058de3-9a46-45bf-a29c-defbf49bf8cb/resourceGroups/ADF-learning/providers/Microsoft.Storage/storageAccounts/storagedatafactorycharan",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
